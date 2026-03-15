@@ -55,7 +55,7 @@ The dataset used in this project comes from publicly available NHS dental statis
 **Processed dataset: `nhs_dental_activity_processed.csv**`
 Cleaned and structured dataset where clinical outliers (UDA/COT > 15) have been removed to ensure data integrity.
 
-**Raw dataset: `nhs_dental_activity_raw.csv**`
+**Raw dataset: `nhs_dental_activity_raw.csv.zip**`
 Original dataset containing raw clinical records and data entry anomalies.
 
 ---
