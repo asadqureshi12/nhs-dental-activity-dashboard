@@ -1,198 +1,142 @@
-NHS Dental Activity Dashboard
+# NHS Dental Activity Dashboard
 
-Project Status
-
+**Project Status**
 Completed portfolio project demonstrating healthcare data analysis and Tableau dashboard development using NHS dental activity data.
 
-⸻
+---
 
-Project Overview
-
+**Project Overview**
 This project analyses NHS dental activity data to explore treatment distribution, patient mix, and practice efficiency across dental providers.
 
 The objective is to understand how NHS dental services are delivered and identify patterns in workload and productivity using publicly available healthcare data.
 
-The analysis was conducted using a cleaned dataset and visualised through a Tableau dashboard.
+The analysis was conducted using a **clinically validated dataset** and visualised through a Tableau dashboard.
 
-⸻
+---
 
-Table of Contents
-	•	Project Overview
-	•	Dashboard Preview
-	•	Objectives
-	•	Dataset
-	•	Data Preparation
-	•	Project Workflow
-	•	Dashboard Visualisations
-	•	Dashboard Interpretation
-	•	Key Insights
-	•	Tools Used
-	•	Skills Demonstrated
-	•	Repository Files
-	•	Project Purpose
+**Table of Contents**
 
-⸻
+* Project Overview
+* Dashboard Preview
+* Objectives
+* Dataset
+* Data Preparation
+* Project Workflow
+* Dashboard Visualisations
+* Dashboard Interpretation
+* Key Insights
+* Tools Used
+* Skills Demonstrated
+* Repository Files
+* Project Purpose
 
-Dashboard Preview
+---
+
+**Dashboard Preview**
 
 <div align="center">
-
-
 <img src="dental-dashboard.png" alt="NHS Dental Dashboard" width="800"/>
-
-
 </div>
 
+---
 
-
-⸻
-
-Objectives
-
+**Objectives**
 This project addresses three key questions:
-	1.	What is the distribution of NHS dental treatment bands?
-	2.	What proportion of treatments fall into different patient categories?
-	3.	How do dental practices compare in terms of efficiency and workload?
 
-⸻
+1. What is the distribution of NHS dental treatment bands?
+2. What proportion of treatments fall into different patient categories?
+3. How do dental practices compare in terms of efficiency and workload, filtering out clinical data errors?
 
-Dataset
+---
 
+**Dataset**
 The dataset used in this project comes from publicly available NHS dental statistics.
 
-Two datasets are included in this repository.
+**Processed dataset: `nhs_dental_activity_processed.csv**`
+Cleaned and structured dataset where clinical outliers (UDA/COT > 15) have been removed to ensure data integrity.
 
-Processed dataset
+**Raw dataset: `nhs_dental_activity_raw.csv**`
+Original dataset containing raw clinical records and data entry anomalies.
 
-nhs_dental_activity_processed.csv
-Cleaned and structured dataset used for analysis and visualisation.
+---
 
-Raw dataset
+**Data Preparation**
+Several preparation steps were performed to rectify the data before building the dashboard:
 
-nhs_dental_activity_raw.zip
-Original dataset compressed due to GitHub file size limits.
+* **Clinical Filtering:** Used SQL to remove records with impossible UDA/COT ratios (records > 15). Standard NHS Band 3 treatments are 12 units; higher values represent data entry errors.
+* **Weighted Aggregation:** Structured the data to allow for weighted efficiency calculations ($\sum UDA / \sum COT$) rather than simple row-level averages.
+* **Structuring treatment band categories:** Standardised Band 1, 2, and 3 classifications.
 
-The processed dataset contains the fields required to reproduce the analysis and dashboard.
+---
 
-⸻
+**Project Workflow**
 
-Data Preparation
+1. NHS dental activity dataset obtained from publicly available NHS statistics.
+2. **SQL Data Rectification:** Filtered outliers and aggregated activity by practice and treatment band.
+3. Cleaned dataset exported as `nhs_dental_activity_processed.csv`.
+4. Dataset imported into Tableau.
+5. **Calculated Field Creation:** Created a weighted `True Clinical Efficiency` metric using the `AGG` function to ensure mathematical accuracy.
+6. Dashboard created to analyse treatment distribution, patient mix, and practice efficiency.
 
-Several preparation steps were performed before building the dashboard:
-	•	Cleaning the raw dataset
-	•	Structuring treatment band categories
-	•	Creating patient category variables
-	•	Calculating efficiency metrics such as Average UDA per Course of Treatment
-	•	Preparing the dataset for Tableau visualisation
+---
 
-⸻
+**Dashboard Visualisations**
 
-Project Workflow
-	1.	NHS dental activity dataset obtained from publicly available NHS statistics.
-	2.	Raw dataset cleaned and structured for analysis.
-	3.	Treatment band categories standardised.
-	4.	Patient mix variables created.
-	5.	Efficiency metrics calculated (Average UDA per Course of Treatment).
-	6.	Dataset imported into Tableau.
-	7.	Dashboard created to analyse treatment distribution, patient mix, and practice efficiency.
+**Patient Mix**
+Shows the proportion of treatments delivered to Paying, Non-paying, and Child patients.
 
-⸻
+**Treatment Band Mix**
+Visualises the distribution of NHS treatment bands (Band 1, 2a/b/c, 3, Urgent, etc.).
 
-Dashboard Visualisations
+**Practice Efficiency Scatter Plot**
+Compares total UDAs delivered against **AGG (True Clinical Efficiency)**.
 
-Patient Mix
+Each point represents an individual dental practice. By using aggregated calculations and SQL filtering, the scatter plot now reflects a realistic clinical range (1–12 UDA per treatment), identifying genuine performance trends rather than data errors.
 
-This chart shows the proportion of treatments delivered to different patient categories:
-	•	Paying patients
-	•	Non-paying patients
-	•	Child patients
+---
 
-It highlights the demographic structure of NHS dental service usage.
-
-⸻
-
-Treatment Band Mix
-
-This chart visualises the distribution of NHS treatment bands, including:
-	•	Band 1
-	•	Band 2 (including subcategories 2a, 2b, 2c)
-	•	Band 3
-	•	Urgent Treatment
-	•	Regulation 11 Replacement Appliance
-
-The chart highlights which treatment types represent the largest share of NHS dental activity.
-
-⸻
-
-Practice Efficiency Scatter Plot
-
-This scatter plot compares dental practices using two key measures:
-	•	Total UDAs delivered (overall workload)
-	•	Average UDA per Course of Treatment (efficiency)
-
-Each point represents an individual dental practice.
-
-A horizontal reference line indicates the benchmark efficiency level, allowing viewers to identify practices performing above or below the typical average.
-
-⸻
-
-Dashboard Interpretation
-
+**Dashboard Interpretation**
 The dashboard enables comparison of dental practices in terms of workload and efficiency.
 
-Practices positioned higher on the scatter plot deliver more UDAs per course of treatment, indicating higher treatment intensity or complexity.
+Practices positioned higher on the scatter plot deliver more UDAs per course of treatment. Because the data has been cleaned of outliers, a high position now correctly indicates higher treatment complexity rather than faulty data.
 
-Practices positioned further to the right deliver a larger total number of UDAs, indicating higher overall service volume.
+---
 
-The reference line at approximately 8.5 average UDAs per course of treatment acts as a benchmark to identify practices performing above or below the typical efficiency level.
+**Key Insights**
 
-⸻
+* **Data Integrity:** Identified that raw datasets contain anomalies that must be filtered to prevent skewed management decisions.
+* **Efficiency Benchmarking:** Most practices cluster between 5 and 8.5 UDA/COT after filtering clinical errors.
+* **Service Delivery:** Band 2 treatments represent the highest volume of non-preventative clinical work.
 
-Key Insights
-	•	Band 2 treatments represent a large share of NHS dental activity.
-	•	NHS dental services serve a mix of paying and exempt patients.
-	•	Efficiency varies significantly across practices.
-	•	Some practices deliver substantially higher average UDAs per treatment, indicating differences in service delivery patterns.
+---
 
-⸻
+**Tools Used**
 
-Tools Used
-	•	Tableau
-	•	SQL
-	•	NHS Public Datasets
+* **SQL:** For data auditing, outlier removal, and aggregation.
+* **Tableau:** For advanced clinical visualization and weighted metrics.
+* **NHS Public Datasets**
 
-⸻
+---
 
-Skills Demonstrated
-	•	Healthcare data analysis
-	•	Data cleaning and preparation
-	•	Exploratory data analysis
-	•	Data visualisation using Tableau
-	•	Dashboard design and storytelling
-	•	GitHub project documentation
+**Skills Demonstrated**
 
-⸻
+* **Clinical Data Validation & Auditing**
+* Healthcare data analysis
+* Data cleaning and preparation (SQL)
+* Weighted aggregation logic (Tableau AGG)
+* Dashboard design and storytelling
+* GitHub project documentation
 
-Repository Files
+---
 
-dashboard.twbx
-Tableau packaged workbook containing the dashboard.
+**Repository Files**
 
-dental-dashboard.png
-Exported dashboard image used for preview.
+* **`dashboard.twbx`**: Updated Tableau workbook containing the rectified calculations.
+* **`nhs_dental_activity_processed.csv`**: The clinically validated dataset.
+* **`nhs_dental_activity_raw.csv`**: Original data for transparency.
+* **`clinical_audit.sql`**: SQL script used to rectify the dataset.
 
-nhs_dental_activity_processed.csv
-Cleaned dataset used for analysis.
+---
 
-nhs_dental_activity_raw.zip
-Original dataset provided in compressed format.
-
-⸻
-
-Project Purpose
-
-This project was created as part of a personal portfolio to demonstrate practical skills in healthcare data analysis, visualisation, and health informatics.
-
-It showcases the ability to work with healthcare datasets and present insights through structured analytical workflows and data visualisation tools.
-
-⸻
+**Project Purpose**
+This project was created as part of a personal portfolio to demonstrate practical skills in healthcare data analysis and health informatics. By identifying and fixing clinical data errors, it showcases the ability to provide reliable insights for healthcare decision-makers
