@@ -1,4 +1,4 @@
-Purpose: Calculate the "Urgent Care Burden." In the NHS, a high volume of urgent cases often indicates a lack of preventative care in that area. This query identifies practices where urgent cases make up a disproportionate percentage of their total workload.
+-- Purpose: Calculate the "Urgent Care Burden." In the NHS, a high volume of urgent cases often indicates a lack of preventative care in that area. This query identifies practices where urgent cases make up a disproportionate percentage of their total workload.
 SELECT 
     PRACTICE_POSTCODE,
     -- 1. Count only the Urgent Cases
