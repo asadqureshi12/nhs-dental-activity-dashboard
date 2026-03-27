@@ -45,7 +45,9 @@ Three views here:
   This was the most striking finding. Children access routine Band 1 care 93.9% of the time, with only 6.1% urgent. Non-paying adults are almost the reverse — 37% of their dental contacts are urgent treatments. Paying adults sit in between at 15.7% urgent. This pattern is consistent with what you'd expect from a system where cost and access barriers push certain groups toward crisis-only care.
 
 - **Top 10 high-pressure dental hotspots**  
-  Ranked by raw urgent treatment volume. WA157JW stands out at 37,282 urgent courses — roughly 46% more than the second-ranked postcode.  
+  Ranked by raw urgent treatment volume. One postcode stands out as a clear outlier, with significantly higher urgent activity than the rest.  
+
+  Outliers like this are typically driven by structural factors rather than purely local demand. These can include high-volume practices, centralised urgent care providers, or locations serving a wider catchment area. As postcode-level data reflects provider location rather than patient origin, high volumes often mean activity is concentrated at one site rather than spread across the area.
 
   While a relative measure such as percentage-based pressure (urgent care as a share of total activity) was considered, it was not used here because it can be misleading at the postcode level. Smaller or specialist urgent care centres often appear as 100% by definition, which does not necessarily indicate system strain.  
 Using raw urgent volume provides a clearer view of where the **actual workload burden** sits, which is more relevant for identifying areas that may require additional resources or capacity.
