@@ -139,3 +139,17 @@ It does so by addressing each of the sub-questions:
 
 3. **Practice-level and geographic pressure points**  
    The urgent pressure by postcode query ranks practices by raw urgent treatment volume. This approach was chosen deliberately — a percentage-based pressure index was computed but not visualised, as the top-ranked postcodes showed close to 100% urgent treatment when sorted by ratio. This could reflect specialist or single-purpose practices rather than genuine system strain, though this was not investigated further. Raw volume was used instead as a more straightforward measure of where urgent demand is concentrated.
+
+## What This Means for the NHS
+
+- **Target access gaps**  
+  Patient groups with high reliance on urgent care may benefit from improved access to routine appointments, particularly in areas where preventative care uptake is low.
+
+- **Focus on high-pressure areas**  
+  Postcodes with consistently high urgent activity can be prioritised for additional capacity, such as extended hours or targeted resource allocation.
+
+- **Plan for seasonal variation**  
+  Fluctuations in quarterly activity suggest that workforce and appointment availability should be adjusted proactively throughout the year to maintain consistent service delivery.
+
+- **Use data for ongoing monitoring**  
+The urgent care rate, UDA delivery trends, and postcode-level demand patterns used in this project can be applied continuously to track changes in access, demand, and service pressure over time.
