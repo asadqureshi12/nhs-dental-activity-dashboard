@@ -1,6 +1,3 @@
-cleaning the data.sql
-/* STEP 1: DATA CLEANING & VALIDATION — UPPERCASE VERSION */
-
 SELECT
     UID,
 
