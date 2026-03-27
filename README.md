@@ -73,10 +73,10 @@ The project follows a clean end-to-end pipeline. All queries are in the `/sql` f
 
 ## Key Findings
 
-- Non-paying adults experience urgent care at a rate six times higher than children — a clear equity signal that cost and access barriers are shaping how different groups use the service.
-- WA157JW is a significant outlier in urgent demand, nearly 50% above the next highest postcode.
-- UDA delivery grew consistently through 2024/25, but the growth in courses of treatment was flatter — suggesting treatments are becoming more complex on average (more UDA per course).
-- Band 2 dominates the treatment mix at 43% of UDA, which points toward a system dealing more with repair than prevention.
+- Non-paying adults experience urgent care at a rate six times higher than children — a clear equity signal that cost and access barriers are shaping how different groups use the service
+- WA157JW is a significant outlier in urgent demand, nearly 50% above the next highest postcode
+- UDA delivery increased overall through 2024/25 but not evenly — growth accelerated in Q2, dropped in Q3, then partially recovered in Q4, suggesting seasonal variation rather than consistent system improvement
+- Band 1 dominates the treatment mix at 60.45% of COT volume, indicating the majority of NHS dental activity is preventative in nature — however urgent treatment still accounts for 10.33%, representing a significant volume of unplanned crisis-driven demand
 
 ---
 
