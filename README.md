@@ -83,14 +83,15 @@ The project follows a clean end-to-end pipeline. All queries are in the `/sql` f
 
 ## Key Findings
 
-- Non-paying adults experience urgent care at a rate six times higher than children — a clear equity signal that cost and access barriers are shaping how different groups use the service
-- WA157JW is a significant outlier in urgent demand, nearly 50% above the next highest postcode
-- UDA delivery increased overall through 2024/25 but not evenly — growth accelerated in Q2, dropped in Q3, then partially recovered in Q4, suggesting seasonal variation rather than consistent system improvement
-- Band 1 dominates the treatment mix at 60.45% of COT volume, indicating the majority of NHS dental activity is preventative in nature — however urgent treatment still accounts for 10.33%, representing a significant volume of unplanned crisis-driven demand.
-- - High urgent care reliance in certain patient groups suggests that demand is not being absorbed through routine pathways, indicating access failure rather than isolated spikes in need.  
-- Some areas have high urgent care simply because services are concentrated there, but if a large share of their work is also urgent, it suggests real pressure in the system.  
-- This helps point out where the system may be struggling, not just where activity is high.
+- Non-paying adults experience urgent care at a rate six times higher than children — a clear equity signal that cost and access barriers are shaping how different groups use the service.  
 
+- One postcode stands out as a significant outlier in urgent demand, nearly 50% higher than the next highest, indicating a concentrated area of activity.  
+
+- UDA delivery increased overall through 2024/25, but not evenly — growth accelerated in Q2, dropped in Q3, then partially recovered in Q4, suggesting seasonal variation rather than consistent system improvement.  
+
+- Band 1 dominates the treatment mix at 60.45% of COT volume, indicating that most NHS dental activity is routine and lower-acuity in nature — examinations, x-rays, and minor interventions rather than complex treatment.
+  
+- Taken together, these patterns suggest that while overall activity is increasing, access to routine care remains uneven, with certain groups and areas relying more heavily on urgent treatment.
 ---
 
 ## Repo Structure
