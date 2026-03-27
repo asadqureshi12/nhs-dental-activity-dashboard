@@ -128,12 +128,10 @@ This project was designed to directly answer the overarching question:
 It does so by addressing each of the sub-questions:
 
 1. **Quarter-by-quarter dental activity changes**  
-   Using the **Quarterly Summary and Recovery Trend dashboards**, we track total UDA and COT delivered over the four financial quarters of 2024/25. The dashboards and SQL pipeline show both absolute volumes and growth percentages, revealing trends such as seasonal dips and overall increases in service delivery.
+   The quarterly summary and recovery trend queries track total UDA delivered across the four financial quarters of 2024/25. The LAG-based recovery trend query calculates quarter-on-quarter growth directly, showing where delivery accelerated, where it contracted, and where it recovered. COT is not tracked in the quarterly view — the trend analysis focuses on UDA as the primary NHS contractual measure.
 
 2. **Patient group reliance on urgent vs routine care**  
-   The **Patient Type and Treatment Band charts** in Dashboard 1 and Dashboard 2 compare Band 1, Band 2, Band 3, and urgent treatments across children, paying adults, and non-paying adults. This shows clearly that non-paying adults rely disproportionately on urgent care, children mostly access routine care, and paying adults are in between. This answers the question of access inequality.
+   The patient type impact query compares Band 1 and urgent treatment volumes across children, non-paying adults, and paying adults. Dashboard 2 visualises this as a percentage split per group, making the access inequality immediately visible. Non-paying adults show the highest urgent care dependency at 37%, compared to 6.1% for children — the most significant equity finding in the project.
 
 3. **Practice-level and geographic pressure points**  
-   The **Urgent Pressure by Postcode and Service Pressure Index views** highlight the postcodes where urgent treatments are highest and where urgent care represents the largest share of total activity. By ranking and visualizing the top hotspots, the project identifies which areas and practices are under the most system pressure, both in absolute volume and relative intensity.
-
-Overall, the combination of aggregated metrics, patient-level breakdowns, and geographic mapping allows this project to provide a full picture of both **service delivery trends** and **system pressure points**, making it clear where NHS dental services are performing well and where access challenges persist.
+   The urgent pressure by postcode query ranks practices by raw urgent treatment volume. This approach was chosen deliberately — a percentage-based pressure index was computed but not visualised, as the top-ranked postcodes showed close to 100% urgent treatment when sorted by ratio. This could reflect specialist or single-purpose practices rather than genuine system strain, though this was not investigated further. Raw volume was used instead as a more straightforward measure of where urgent demand is concentrated.
