@@ -1,8 +1,8 @@
 # NHS Dental Service Delivery & Access Pressure Analysis
 
 **Data Source:** NHS Business Services Authority (BSA) Open Data — Financial Year 2024/25  
-**Tools:** SQL (DBeaver / SQLite), Tableau  
-**Status:** Complete — background portfolio project
+**Tools:** SQL (DB Browser for SQLite), Tableau  
+**Status:** Complete
 
 ---
 
@@ -29,9 +29,9 @@ That breaks down into three sub-questions:
 
 Three views here:
 
-- **Patient type distribution** — roughly even split between children, non-paying adults, and paying adults across the dataset
-- **Treatment band distribution** — Band 2 accounts for the largest share of UDA volume (43%), suggesting the majority of activity involves restorative rather than preventative work
-- **Efficiency scatter plot** — plots total UDA against average UDA per course of treatment per practice, with an 8.5 UDA benchmark line. Most practices cluster below the benchmark; a small number of high-volume outliers deliver significantly fewer UDA per treatment course
+- **Patient type distribution (COT volume)** — paying adults account for the largest share of clinical activity at 17.9M courses, followed by children at 11.9M. Non-paying adults are notably lower at 5.5M — which when read alongside Dashboard 2 suggests this group is accessing the service less overall but relying more heavily on urgent care when they do.
+- **Treatment band distribution (COT volume)** — Band 1 dominates at 60.45%, meaning the majority of NHS dental activity is check-up and prevention level work. Band 2 accounts for 25.26%. Urgent treatment makes up 10.33% of total COT volume — a meaningful proportion given it represents unplanned, crisis-driven demand.
+- **Efficiency scatter plot** — plots total UDA against average UDA per course of treatment per practice, with an 8.5 UDA benchmark line. Most practices cluster well below the benchmark, with efficiency dropping further as total UDA volume increases. A small number of high-volume outliers beyond 220K UDA show noticeably lower UDA per treatment course, suggesting larger practices may be handling a higher proportion of lighter-touch treatments.
 
 ---
 
@@ -66,18 +66,14 @@ The project follows a clean end-to-end pipeline. All queries are in the `/sql` f
 | `quarterly_recovery_trend.sql` | Quarter-on-quarter UDA growth using LAG window function |
 | `dental_practice_master_volume.sql` | Full practice-level breakdown — COT by band, patient type, workload intensity |
 
-### A note on Query 04
-
-The service pressure index (urgent % of total COT per practice) was computed but not visualised. When sorted, the top-ranked postcodes showed close to 100% urgent treatment — which sounds alarming, but on inspection these are dedicated urgent dental care centres, not overwhelmed general practices. Their entire purpose is urgent care, so 100% is expected. To make this metric meaningful for general practices, you would need to filter out postcodes where urgent treatment is the only band present, or raise the minimum COT threshold significantly. This is flagged as a future refinement rather than a limitation of the analysis itself.
-
 ---
 
 ## Key Findings
 
-- Non-paying adults experience urgent care at a rate six times higher than children — a clear equity signal that cost and access barriers are shaping how different groups use the service
-- WA157JW is a significant outlier in urgent demand, nearly 50% above the next highest postcode
-- UDA delivery grew consistently through 2024/25, but the growth in courses of treatment was flatter — suggesting treatments are becoming more complex on average (more UDA per course)
-- Band 2 dominates the treatment mix at 43% of UDA, which points toward a system dealing more with repair than prevention
+- Non-paying adults experience urgent care at a rate six times higher than children — a clear equity signal that cost and access barriers are shaping how different groups use the service.
+- WA157JW is a significant outlier in urgent demand, nearly 50% above the next highest postcode.
+- UDA delivery grew consistently through 2024/25, but the growth in courses of treatment was flatter — suggesting treatments are becoming more complex on average (more UDA per course).
+- Band 2 dominates the treatment mix at 43% of UDA, which points toward a system dealing more with repair than prevention.
 
 ---
 
@@ -109,3 +105,22 @@ nhs-dental-dashboard/
     ├── service_pressure_index.csv
     └── patient_type_impact.csv
 ```
+
+## How This Project Answers the Questions
+
+This project was designed to directly answer the overarching question:
+
+> *Is NHS dental service delivery keeping up with patient demand over time, and which patient groups and geographic areas are bearing the most pressure?*
+
+It does so by addressing each of the sub-questions:
+
+1. **Quarter-by-quarter dental activity changes**  
+   Using the **Quarterly Summary and Recovery Trend dashboards**, we track total UDA and COT delivered over the four financial quarters of 2024/25. The dashboards and SQL pipeline show both absolute volumes and growth percentages, revealing trends such as seasonal dips and overall increases in service delivery.
+
+2. **Patient group reliance on urgent vs routine care**  
+   The **Patient Type and Treatment Band charts** in Dashboard 1 and Dashboard 2 compare Band 1, Band 2, Band 3, and urgent treatments across children, paying adults, and non-paying adults. This shows clearly that non-paying adults rely disproportionately on urgent care, children mostly access routine care, and paying adults are in between. This answers the question of access inequality.
+
+3. **Practice-level and geographic pressure points**  
+   The **Urgent Pressure by Postcode and Service Pressure Index views** highlight the postcodes where urgent treatments are highest and where urgent care represents the largest share of total activity. By ranking and visualizing the top hotspots, the project identifies which areas and practices are under the most system pressure, both in absolute volume and relative intensity.
+
+Overall, the combination of aggregated metrics, patient-level breakdowns, and geographic mapping allows this project to provide a full picture of both **service delivery trends** and **system pressure points**, making it clear where NHS dental services are performing well and where access challenges persist.
