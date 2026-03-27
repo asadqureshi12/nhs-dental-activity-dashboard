@@ -128,7 +128,7 @@ This project was designed to directly answer the overarching question:
 It does so by addressing each of the sub-questions:
 
 1. **Quarter-by-quarter dental activity changes**  
-   The quarterly summary and recovery trend queries track total UDA delivered across the four financial quarters of 2024/25. The LAG-based recovery trend query calculates quarter-on-quarter growth directly, showing where delivery accelerated, where it contracted, and where it recovered. COT is not tracked in the quarterly view — the trend analysis focuses on UDA as the primary NHS contractual measure.
+   The quarterly summary and recovery trend queries track total UDA delivered across the four financial quarters of 2024/25. The LAG-based recovery trend query calculates quarter-on-quarter growth directly, showing where delivery accelerated, where it contracted, and where it recovered. UDA is used as the primary measure as it is the core NHS contractual metric for dental activity.
 
 2. **Patient group reliance on urgent vs routine care**  
    The patient type impact query compares Band 1 and urgent treatment volumes across children, non-paying adults, and paying adults. Dashboard 2 visualises this as a percentage split per group, making the access inequality immediately visible. Non-paying adults show the highest urgent care dependency at 37%, compared to 6.1% for children — the most significant equity finding in the project.
