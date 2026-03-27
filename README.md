@@ -21,6 +21,15 @@ That breaks down into three sub-questions:
 
 ---
 
+## Data Workflow
+Before any analysis, we gathered raw NHS dental activity data at the practice level. This dataset required significant cleaning and standardization to ensure reliable results. We removed nulls, validated patient types, and restructured columns for easier analysis.
+
+Once the data was prepared, we aggregated it to calculate key metrics such as total UDA delivered, courses of treatment by band and patient type, and urgent care volume by postcode. These metrics were then visualized in Tableau, providing clear insights into service delivery trends, patient access patterns, and geographic pressure points.
+
+This workflow—from raw data gathering to cleaning, analysis, and visualization—ensures that every chart and finding reflects accurate, trustworthy information rather than unprocessed source data.
+
+---
+
 ## Dashboards
 
 ### Dashboard 1 — Practice Activity Overview
