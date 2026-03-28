@@ -39,7 +39,7 @@ This workflow—from raw data gathering to cleaning, analysis, and visualization
 Three views here:
 
 - **Patient type distribution (COT volume)** — paying adults account for the largest share of clinical activity at 17.9M courses, followed by children at 11.9M. Non-paying adults are notably lower at 5.5M — which when read alongside Dashboard 2 suggests this group is accessing the service less overall but relying more heavily on urgent care when they do.
-- **Treatment band distribution (COT volume)** — Band 1 dominates at 60.45%, meaning the majority of NHS dental activity is check-up and prevention level work. Band 2 accounts for 25.26%. Urgent treatment makes up 10.33% of total COT volume — a meaningful proportion given it represents unplanned, crisis-driven demand.
+- **Treatment band distribution (COT volume)** — Band 1 dominates at 60.45%, meaning the majority of NHS dental activity is routine and lower-acuity in nature. Band 2 accounts for 25.26%. Urgent treatment makes up 10.33% of total COT volume — a meaningful proportion given it represents unplanned, crisis-driven demand.
 - Both Charts use COT (Courses of Treatment) rather than UDA to show actual patient episodes, reflecting the true workload regardless of treatment complexity.
 - **Efficiency scatter plot** — plots total UDA against average UDA per course of treatment per practice. Most practices cluster in the lower efficiency range, with efficiency dropping further as total UDA volume increases. A small number of high-volume outliers beyond 220K UDA show noticeably lower UDA per treatment course, suggesting larger practices may be handling a higher proportion of lighter-touch treatments.
 
