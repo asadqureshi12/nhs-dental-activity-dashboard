@@ -62,7 +62,7 @@ Outliers like this are typically driven by structural factors rather than purely
 While a relative measure such as percentage-based pressure (urgent care as a share of total activity) was considered, it was not used here because it can be misleading at the postcode level. Smaller or specialist urgent care centres often appear as 100% by definition, which does not necessarily indicate system strain. Using raw urgent volume provides a clearer view of where the actual workload burden sits, making it more useful for identifying areas that may require additional resources or capacity.
 
 - **Quarterly growth**  
-  the quarter-on-quarter growth rate peaked in Q2 at 1.578, dropped sharply to 0.112 in Q3, then partially recovered to 0.714 in Q4. This pattern likely reflects seasonal variation in NHS dental scheduling rather than consistent system improvement.
+  The quarter-on-quarter growth rate peaked in Q2 at 1.578, dropped sharply to 0.112 in Q3, then partially recovered to 0.714 in Q4. This pattern likely reflects seasonal variation in NHS dental scheduling rather than consistent system improvement.
 
 ---
 
@@ -136,7 +136,7 @@ It does so by addressing each of the sub-questions:
    The quarterly summary and recovery trend queries track total UDA delivered across the four financial quarters of 2024/25. The LAG-based recovery trend query calculates quarter-on-quarter growth directly, showing where delivery accelerated, where it contracted, and where it recovered. UDA is used as the primary measure as it is the core NHS contractual metric for dental activity.
 
 2. **Patient group reliance on urgent vs routine care**  
-   The patient type impact query compares Band 1 and urgent treatment volumes across children, non-paying adults, and paying adults. Dashboard 2 visualises this as a percentage split per group, making the access inequality immediately visible. Non-paying adults show the highest urgent care dependency at 37%, compared to 6.1% for children — the most significant equity finding in the project.
+   The patient type impact query compares Band 1 and urgent treatment volumes across children, non-paying adults, and paying adults. Dashboard 2 visualises this as a percentage split per group, making the access inequality immediately visible. Non-paying adults show the highest urgent care dependency at 37%, compared to 6.08% for children — the most significant equity finding in the project.
 
 3. **Practice-level and geographic pressure points**  
    The urgent pressure by postcode query ranks practices by raw urgent treatment volume. This approach was chosen deliberately — a percentage-based pressure index was computed but not visualised, as the top-ranked postcodes showed close to 100% urgent treatment when sorted by ratio. This could reflect specialist or single-purpose practices rather than genuine system strain, though this was not investigated further. Raw volume was used instead as a more straightforward measure of where urgent demand is concentrated.
