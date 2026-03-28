@@ -52,7 +52,7 @@ Three views here:
 Three views here:
 
 - **Access inequality — preventative vs emergency care by patient type**  
-  This was the most striking finding. Children access routine Band 1 care 93.9% of the time, with only 6.1% urgent. Non-paying adults are almost the reverse — 37% of their dental contacts are urgent treatments. Paying adults sit in between at 15.7% urgent. This pattern is consistent with what you'd expect from a system where cost and access barriers push certain groups toward crisis-only care.
+  This was the most striking finding. Children access routine Band 1 care 93.92% of the time, with only 6.08% urgent. Non-paying adults are almost the reverse — 37% of their dental contacts are urgent treatments. Paying adults sit in between at 15.74% urgent. This pattern is consistent with what you'd expect from a system where cost and access barriers push certain groups toward crisis-only care.
 
 - **Top 10 high-pressure dental hotspots**
 Ranked by raw urgent treatment volume. One postcode stands out as a clear outlier, with significantly higher urgent activity than the rest.
@@ -61,7 +61,7 @@ Outliers like this are typically driven by structural factors rather than purely
 
 While a relative measure such as percentage-based pressure (urgent care as a share of total activity) was considered, it was not used here because it can be misleading at the postcode level. Smaller or specialist urgent care centres often appear as 100% by definition, which does not necessarily indicate system strain. Using raw urgent volume provides a clearer view of where the actual workload burden sits, making it more useful for identifying areas that may require additional resources or capacity.
 
-- **Quarterly workload and growth**  
+- **Quarterly growth**  
   the quarter-on-quarter growth rate peaked in Q2 at 1.578, dropped sharply to 0.112 in Q3, then partially recovered to 0.714 in Q4. This pattern likely reflects seasonal variation in NHS dental scheduling rather than consistent system improvement.
 
 ---
