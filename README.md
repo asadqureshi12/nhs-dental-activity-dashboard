@@ -62,7 +62,7 @@ Outliers like this are typically driven by structural factors rather than purely
 While a relative measure such as percentage-based pressure (urgent care as a share of total activity) was considered, it was not used here because it can be misleading at the postcode level. Smaller or specialist urgent care centres often appear as 100% by definition, which does not necessarily indicate system strain. Using raw urgent volume provides a clearer view of where the actual workload burden sits, making it more useful for identifying areas that may require additional resources or capacity.
 
 - **Quarterly growth**  
-  The quarter-on-quarter growth rate peaked in Q2 at 1.578, dropped sharply to 0.112 in Q3, then partially recovered to 0.714 in Q4. This pattern likely reflects seasonal variation in NHS dental scheduling rather than consistent system improvement.
+  The quarter-on-quarter growth rate peaked in Q2 at 1.578, dropped sharply to 0.112 in Q3, then partially recovered to 0.714 in Q4. Quarterly fluctuations likely reflect seasonal variation, but when combined with high urgent care reliance in certain groups, they may indicate uneven access to routine care rather than true demand reduction.
 
 ---
 
