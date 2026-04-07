@@ -8,7 +8,9 @@
 
 ## What This Project Is About
 
-I wanted to look at whether NHS dental services are actually keeping up with patient demand, and where the pressure points are. The NHS BSA publishes dental activity data at practice level, broken down by treatment band and patient type — it's detailed enough to ask some genuinely useful questions, but messy enough to need careful handling before you can trust the numbers.
+This project analyses NHS dental activity to identify where service delivery is failing to meet patient demand, with a focus on access inequality and urgent care pressure.
+
+The objective is to highlight where intervention is required—across patient groups, time periods, and geographic areas.
 
 The core question I tried to answer was:
 
